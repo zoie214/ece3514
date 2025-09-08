@@ -5,7 +5,7 @@
 
 class CreditCard {
     public:
-        // NOT virtual → bad in polymorphic base
+        // destructor virtual → good in polymorphic base
         virtual ~CreditCard() { 
             std::cout << "~CreditCard\n"; 
         }
@@ -31,5 +31,6 @@ class PredatoryCreditCard : public CreditCard {
 
 /*
 ~CreditCard
+~PredatoryCreditCard (freeing)
 ~CreditCard
 */

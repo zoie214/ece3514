@@ -5,7 +5,7 @@
 
 class CreditCard {
     public:
-        // NOT virtual → bad in polymorphic base
+        // Destructor NOT virtual → bad in polymorphic base
         ~CreditCard() { 
             std::cout << "~CreditCard\n"; 
         }
