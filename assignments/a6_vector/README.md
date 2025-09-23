@@ -2,7 +2,7 @@
 
 * You will implement a simplified, std::vector like dynamic array called dsa::Vector<T>. 
 * This is part 1 to implement functions declared in .hpp. You will also write test cases.
-* std::vector must not be used to implement any of these functions.
+* std::vector must not be used to implement any of these functions (No points if std::vector is used even all test cases are passed at Gradescope).
 
 Starter Code: https://github.com/naneja/ece3514/tree/main/assignments/a6_vector
 
@@ -211,7 +211,7 @@ procedure SHRINK_TO_FIT():
 
 
 
-Testing Quality with Catch 2 (15 pts)
+Testing Quality with Catch 2 (12 pts)
 
 - Coverage of edge cases; negative tests
 - Meaningful Test description and tags
