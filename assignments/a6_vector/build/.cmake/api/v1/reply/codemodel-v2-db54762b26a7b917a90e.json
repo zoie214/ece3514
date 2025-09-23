@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "dsac",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "dsac::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dsac-c506b81392e8fe943be7.json",
+					"name" : "dsac",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_test-79978e6bae84cd934b25.json",
+					"name" : "my_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/aneja/Library/CloudStorage/Dropbox/n/vt.edu/@slides/3514DSA/code/assignments/a6_vector/build",
+		"source" : "/Users/aneja/Library/CloudStorage/Dropbox/n/vt.edu/@slides/3514DSA/code/assignments/a6_vector"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
