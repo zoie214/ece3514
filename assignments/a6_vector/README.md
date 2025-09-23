@@ -12,7 +12,8 @@ Please refer to slides 5.4 Vector and below pseudocode as how these functions sh
 //vector.hpp
 
 #pragma once
-#include <iostream>
+
+#include <algorithm>  //for std::max
 
 namespace dsa{
 
