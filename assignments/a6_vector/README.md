@@ -6,12 +6,10 @@
 
 Starter Code: https://github.com/naneja/ece3514/tree/main/assignments/a6_vector
 
-Please refer to slides 5.4 Vector to see pseudocode as how these functions should be implemented.
-
-
+Please refer to slides 5.4 Vector and below pseudocode as how these functions should be implemented.
 
 ```cpp
-//vector.h
+//vector.hpp
 
 #pragma once
 #include <iostream>
@@ -88,8 +86,6 @@ public:
 }; //end class Vector
 }//end namespace dsa
 ```
-
-
 
 # Pseudocode
 
@@ -187,3 +183,35 @@ Procedure reserve(minimum:integer)
 
 
 
+```pseudocode
+// helper function not mentioned but you may define for shrink
+procedure REALLOCATE(new_cap):
+    if new_cap == cap: 
+    	return
+    allocate TEMP array of length new_cap
+    for k from 0 to sz-1:
+        move/copy DATA[k] into TEMP[k]
+    delete DATA
+    DATA <- TEMP
+    cap  <- new_cap
+
+
+procedure SHRINK():
+    if cap > 0 and sz <= cap / 4:
+        new_cap <- max(1, cap/2)
+        if new_cap < sz:
+            new_cap <- sz
+        REALLOCATE(new_cap)
+
+procedure SHRINK_TO_FIT():
+    if cap > sz:
+        new_cap <- max(1, sz)
+        REALLOCATE(new_cap)
+```
+
+
+
+Testing Quality with Catch 2 (15 pts)
+
+- Coverage of edge cases; negative tests
+- Meaningful Test description and tags
