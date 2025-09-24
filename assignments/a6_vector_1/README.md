@@ -210,16 +210,23 @@ procedure SHRINK_TO_FIT():
 
 
 
-Testing Quality with Catch 2 (12 pts)
+## Submissions
 
-- Coverage of edge cases; negative tests
-  - You can create const vector as below for testing
-  
-  - ```cpp
+* vector.hpp
+
+* test_vector.cpp
+
+  * You can create const vector as below for testing
+
+    ```cpp
     dsa::Vector<int> v;
     for (int i{0}; i < 5; ++i) 
         v.push_back(i);
     const dsa::Vector<int>& cv = v;
     ```
-  
-- Meaningful Test description and tags
+
+## Rubrics
+
+* Testing Quality with Catch 2 (12 pts)
+  - Coverage of edge cases; negative tests
+  - Meaningful Test description and tags
