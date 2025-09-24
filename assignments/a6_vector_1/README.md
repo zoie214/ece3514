@@ -200,8 +200,6 @@ procedure REALLOCATE(new_cap):
 procedure SHRINK():
     if cap > 0 and sz <= cap / 4:
         new_cap <- max(1, cap/2)
-        if new_cap < sz:
-            new_cap <- sz
         REALLOCATE(new_cap)
 
 procedure SHRINK_TO_FIT():
@@ -215,4 +213,13 @@ procedure SHRINK_TO_FIT():
 Testing Quality with Catch 2 (12 pts)
 
 - Coverage of edge cases; negative tests
+  - You can create const vector as below for testing
+  
+  - ```cpp
+    dsa::Vector<int> v;
+    for (int i{0}; i < 5; ++i) 
+        v.push_back(i);
+    const dsa::Vector<int>& cv = v;
+    ```
+  
 - Meaningful Test description and tags
