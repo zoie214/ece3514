@@ -4,8 +4,6 @@
 * This is part 1 to implement functions declared in .hpp. You will also write test cases.
 * std::vector must not be used to implement any of these functions (No points if std::vector is used even all test cases are passed at Gradescope).
 
-Starter Code: https://github.com/naneja/ece3514/tree/main/assignments/a6_vector
-
 Please refer to slides 5.4 Vector and below pseudocode as how these functions should be implemented.
 
 ```cpp
@@ -140,6 +138,7 @@ Procedure push_back(element : T)
 Procedure pop_back()
 // No validation check on size required rather pop_back must be called when size >=1 else can be undefined
     size <- size-1
+	call SHRINK()
 ```
 
 
@@ -164,6 +163,7 @@ Procedure erase(i:integer)
         data[k-1] <- data[k]
 
     size <- size-1
+    call SHRINK()
 ```
 
 
