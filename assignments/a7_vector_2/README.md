@@ -1,144 +1,60 @@
 # A7: Vector (Part 2)
 
-* You will complete the implementation of a simplified, std::vector like dynamic array called dsa::Vector<T>. 
-* This is part 2 to implement functions declared in .hpp. You will also write test cases.
-* std::vector must not be used to implement any of these functions (No points if std::vector is used even all test cases are passed at Gradescope).
+* You will complete
 
-Please refer to slides 5.4 Vector, 5.5 Iterators, and 5.7 Clone Move Deallocate
+  * simplified, std::vector like dynamic array called dsa::Vector<T>. 
+  * use the vector class to create Matrix class with overload + operator for matrix addition.
 
-Please also see below pseudocode as how these functions should be implemented.
+* The pseudocode to guide the functions in written in vector.hpp and matrix.hpp
 
-# Pseudocode
+  * std::vector must not be used to implement any of these functions 
+    * (No points if std::vector is used even all test cases are passed at Gradescope)
 
-```ps
-Procedure Vector()   // default constructor
-    // Automatically construct all data members
-    // Do not add any custom logic here.
-End Procedure
+* Starter code is given in 
 
-Function capacity() -> integer
-    return capacity
+  * include/vector.hpp
+    * Please copy the implementation from part 1 in this 1 or add additional functions (as required in this assignment) in the vector.hpp of part 1.
 
-Function size() -> integer
-    return size
+  * include/matrix.hpp
+  * There are two files for testing
+    * test_vector_1.cpp (you may copy all of the previous test cases in this)
+    * test_vector_2.cpp (you may write new test cases in this)
+    * CMakeLists.txt is configured to use both test files
+    * Please note \#define CATCH_CONFIG_MAIN should be in only one test file. This has been commented in test_vector_2.cpp.
 
-Function empty() -> boolean
-    return (size == 0)
-```
+* Submissions:
 
+  * vector.hpp
 
+  * matrix.hpp
 
-```ps
-Function operator[](i:integer) -> T&
-    return data[i]
+  * test_vector_2.cpp
 
-Function at(i:integer) -> T&
-    if i < 0 or i >= size then
-        throw "out of bounds error"
-    return data[i]
-```
+    * at least three different test cases for iterator
 
+      * ```cpp
+        // create vector for test cases
+        dsa::Vector<int> v;
+        for (int i{0}; i < 5; ++i) 
+            v.push_back(i);
+        ```
 
+    * at least three different test cases for const iterator
 
-```ps
-Function front() -> T&
-    return data[0]
+      * ```cpp
+        // create const vector for test cases
+        dsa::Vector<int> v;
+        for (int i{0}; i < 5; ++i) 
+            v.push_back(i);
+        const dsa::Vector<int>& cv = v;
+        ```
 
-Function back() -> T&
-    return data[size-1]
-```
+    * atleast three test cases for matrix addition (including one for addition)
 
+      * ```cpp
+        dsa::Matrix a(1, 2), b(1, 2) // declare matrix with default 0
+        // assign values as below or in loop
+        a(0,0)=1; a(0,1)=2;
+        b(0,0)=3; b(0,1)=4;
+        ```
 
-
-```pseudocode
-Procedure push_back(element : T)
-    if size==capacity then
-        reserve(max(1, 2*capacity))
-    data[size] <- element
-    size <- size + 1
-
-Procedure pop_back()
-// No validation check on size required rather pop_back must be called when size >=1 else can be undefined
-    size <- size-1
-```
-
-
-
-```pseudocode
-Procedure insert(i:integer, element:T)
-    if size == capacity then
-        reserve(max(1, 2*capacity))
-
-    for k ← size-1 downto i do
-        data[k+1] <- data[k]
-
-    data[i] <- element
-    size <- size+1
-```
-
-
-
-```pseudocode
-Procedure erase(i:integer)
-    for k <- i+1 to size-1 do
-        data[k-1] <- data[k]
-
-    size <- size-1
-```
-
-
-
-```pseudocode
-Procedure reserve(minimum:integer)
-
-    if capacity < minimum then
-        new_array <- new array of T[minimum]
-
-        for k <- 0 to size - 1 do
-            new_array[k] <- data[k]
-
-        delete data
-        data <- new_array
-        capacity <- minimum
-```
-
-
-
-```pseudocode
-// helper function not mentioned but you may define for shrink
-procedure REALLOCATE(new_cap):
-    if new_cap == cap: 
-    	return
-    allocate TEMP array of length new_cap
-    for k from 0 to sz-1:
-        move/copy DATA[k] into TEMP[k]
-    delete DATA
-    DATA <- TEMP
-    cap  <- new_cap
-
-
-procedure SHRINK():
-    if cap > 0 and sz <= cap / 4:
-        new_cap <- max(1, cap/2)
-        if new_cap < sz:
-            new_cap <- sz
-        REALLOCATE(new_cap)
-
-procedure SHRINK_TO_FIT():
-    if cap > sz:
-        new_cap <- max(1, sz)
-        REALLOCATE(new_cap)
-```
-
-
-
-
-
-
-
-
-
-Testing Quality with Catch 2 (12 pts)
-
-- Coverage of edge cases; negative tests
-- Meaningful Test description and tags

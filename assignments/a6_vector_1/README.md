@@ -112,7 +112,7 @@ Function operator[](i:integer) -> T&
 
 Function at(i:integer) -> T&
     if i < 0 or i >= size then
-        throw "out of bounds error"
+        throw std::out_of_range("Invalid Index")
     return data[i]
 ```
 
