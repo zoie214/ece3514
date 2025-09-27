@@ -24,23 +24,39 @@
 
 * Submissions:
 
-  * vector.hpp
+  * Below Files should be submitted
 
-  * matrix.hpp
+    * vector.hpp
 
-  * test_vector_2.cpp
+    * matrix.hpp
 
-    * at least three different test cases for iterator
+    * test_vector_2.cpp
 
+    * optional test_vector_1.cpp (this is from Part 1, you may update cases if you want but will not be graded)
+  
+    * Please don't submit the build or executable folder [negative two points if submitted]
+  
+  * Autograder [43 Points]
+  
+    * vector.hpp
+  
+    * matrix.hpp
+  
+    * No points if std::vector used even autograder passes all tests
+  
+  * test_vector_2.cpp [12 points]
+  
+    * at least four different test cases for iterator
+  
       * ```cpp
         // create vector for test cases
         dsa::Vector<int> v;
         for (int i{0}; i < 5; ++i) 
             v.push_back(i);
         ```
-
-    * at least three different test cases for const iterator
-
+  
+    * at least four different test cases for const iterator
+  
       * ```cpp
         // create const vector for test cases
         dsa::Vector<int> v;
@@ -48,13 +64,14 @@
             v.push_back(i);
         const dsa::Vector<int>& cv = v;
         ```
-
-    * atleast three test cases for matrix addition (including one for addition)
-
+  
+    * atleast four test cases for matrix (including one for addition)
+  
       * ```cpp
         dsa::Matrix a(1, 2), b(1, 2) // declare matrix with default 0
         // assign values as below or in loop
         a(0,0)=1; a(0,1)=2;
         b(0,0)=3; b(0,1)=4;
         ```
+  
 
