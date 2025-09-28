@@ -5,7 +5,7 @@
   * simplified, std::vector like dynamic array called dsa::Vector<T>. 
   * use the vector class to create Matrix class with overload + operator for matrix addition.
 
-* The pseudocode to guide the functions in written in vector.hpp and matrix.hpp
+* The pseudocode for the functions to help is written in vector.hpp and matrix.hpp
 
   * std::vector must not be used to implement any of these functions 
     * (No points if std::vector is used even all test cases are passed at Gradescope)
@@ -13,12 +13,12 @@
 * Starter code is given in 
 
   * include/vector.hpp
-    * Please copy the implementation from part 1 in this 1 or add additional functions (as required in this assignment) in the vector.hpp of part 1.
+    * Please copy the implementation from part 1 in this vector.hpp or add additional functions (as required in this assignment) in the vector.hpp of part 1.
 
   * include/matrix.hpp
   * There are two files for testing
     * test_vector_1.cpp (you may copy all of the previous test cases in this)
-    * test_vector_2.cpp (you may write new test cases in this)
+    * test_vector_2.cpp (this file is to write new test cases for part 2 of the assignment)
     * CMakeLists.txt is configured to use both test files
     * Please note \#define CATCH_CONFIG_MAIN should be in only one test file. This has been commented in test_vector_2.cpp.
 
