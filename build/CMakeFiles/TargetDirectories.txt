@@ -1,0 +1,5 @@
+C:/Users/zoiem/vector_project/ece3514/build/CMakeFiles/dsac.dir
+C:/Users/zoiem/vector_project/ece3514/build/CMakeFiles/my_test.dir
+C:/Users/zoiem/vector_project/ece3514/build/CMakeFiles/test.dir
+C:/Users/zoiem/vector_project/ece3514/build/CMakeFiles/edit_cache.dir
+C:/Users/zoiem/vector_project/ece3514/build/CMakeFiles/rebuild_cache.dir
