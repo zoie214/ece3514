@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/zoiem/vector_project/ece3514/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/dsac.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\dsac.dir\\src\\main.cpp.obj -c C:\\Users\\zoiem\\vector_project\\ece3514\\assignments\\a6_vector_1\\src\\main.cpp",
+  "file": "C:/Users/zoiem/vector_project/ece3514/assignments/a6_vector_1/src/main.cpp",
+  "output": "CMakeFiles/dsac.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/zoiem/vector_project/ece3514/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/my_test.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\my_test.dir\\tests\\test_vector.cpp.obj -c C:\\Users\\zoiem\\vector_project\\ece3514\\assignments\\a6_vector_1\\tests\\test_vector.cpp",
+  "file": "C:/Users/zoiem/vector_project/ece3514/assignments/a6_vector_1/tests/test_vector.cpp",
+  "output": "CMakeFiles/my_test.dir/tests/test_vector.cpp.obj"
+}
+]

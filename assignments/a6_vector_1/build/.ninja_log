@@ -1,0 +1,5 @@
+# ninja log v6
+5	2140	7808925468571196	CMakeFiles/dsac.dir/src/main.cpp.obj	94a2f1fcbfa04375
+2147	2428	7808925490015537	dsac.exe	69f1ca47a9230308
+36	31532	7808925468903032	CMakeFiles/my_test.dir/tests/test_vector.cpp.obj	290e8c10c01ca827
+31537	32512	7808925783811923	my_test.exe	31a7d1729d594a47
